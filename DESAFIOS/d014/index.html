@@ -4,21 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas</title>
+    
     <style>
+
+        thead {
+            background-color: darkgray;
+            color: white;
+        }
+
         body {
-            font-family: Arial, Arial, Helvetica, sans-serif;
-            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            
         }
 
         table {
             border-collapse: collapse;
         }
 
+        tbody {
+            text-align: left;
+        }
+
         th, td {
-            border: 1px solid grey;
+            border: 1px solid black;
             padding: 5px;
         }
+
+        tr#media-exatas {
+            text-align: left;
+            background-color: darkgray;
+        }
+
+        tfoot{
+            text-align: left;
+            background-color: darkgray;
+        }
     </style>
+
 </head>
 <body>
     <table>
@@ -33,6 +55,13 @@
                 <th>Nota 1</th>
                 <th>Nota 2</th>
                 </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                    <th colspan="4">Média Humanas</th>
+                    <td>0.0</td>
+                </tr>
+            </tfoot>
             <tbody>
                 <tr>
                     <th rowspan="5">Exatas</th>
@@ -60,7 +89,7 @@
                     <td>0.0</td>
                     <td>0.0</td>
                 </tr>
-                <tr>
+                <tr id="media-exatas">
                 <th colspan="4">Média de Exatas</th>
                 <td>0.0</td>
                 </tr>
@@ -77,12 +106,7 @@
                     <td>0.0</td>
                     <td>0.0</td>
                 </tr>
-                <tr>
-                    <th colspan="4">Média de Humanas</th>
-                    <td>0.0</td>
-                </tr>
             </tbody>
-        </thead>
     </table>
 </body>
 </html>
